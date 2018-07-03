@@ -1,2 +1,2 @@
-# learnAPp
+# learnApp
 learn react-native
