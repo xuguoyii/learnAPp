@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/Ionicons';
+import IndexContainer from './indexContainer';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -32,10 +33,8 @@ export default class App extends Component{
                     renderIcon={() => <Icon name={ 'ios-home' } size={30} color={'gray'}/>}
                     renderSelectedIcon={() => <Icon name={ 'ios-home' } size={30} color={'#4E78E7'}/>}
                     onPress={() => this.setState({ selectedTab: 'home' })}>
-                    <Text>
-                        
-                        Welcome to React Native3434343!
-                    </Text>
+                    
+                    <IndexContainer />
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     title="其他"
