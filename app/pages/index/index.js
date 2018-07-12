@@ -16,11 +16,11 @@ export default class Index extends React.Component {
 	}
 
 	componentWillMount() {
-
+		this.props.getArticleList();
 	}
 
 	componentWillReceiveProps(nextProps) {
-
+		console.log(nextProps)
 	}
 
 

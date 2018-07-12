@@ -26,7 +26,7 @@ export default class App extends Component{
     render() {
         const { reducer } = this.props;
         return (
-            <TabNavigator tabBarStyle={{ backgroundColor:'white' }} style={{backgroundColor: 'white'}}>
+            <TabNavigator tabBarStyle={{ backgroundColor:'white' }} style={{backgroundColor: 'white',marginTop:20}}>
                 <TabNavigator.Item
                     title="主页"
                     selected={this.state.selectedTab === 'home'}

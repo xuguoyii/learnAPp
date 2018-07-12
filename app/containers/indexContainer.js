@@ -11,13 +11,20 @@ class IndexContainer extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+	const { articleList } = state;
 	return {
-		
+		articleList: articleList || []
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
+		getArticleList: (payload) => {
+			return dispatch({
+				type: 'GET_ARTICLE_LIST_START',
+				payload: payload
+			});
+		},
     }
 }
 
