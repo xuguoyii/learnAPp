@@ -24,7 +24,9 @@ export default class Find extends React.Component {
         showsVerticalScrollIndicator={false}
       >
         <WingBlank style={{ marginTop: 20, marginBottom: 5 }}>
-          <Text style={{ marginBottom: 10 }}>项目的排列方向</Text>
+          <Text style={{ marginBottom: 10 }}>
+            项目的排列方向
+          </Text>
           <Text>direction="row":主轴为水平方向，起点在左端</Text>
         </WingBlank>
         <WingBlank style={{ marginBottom: 5 }}>
@@ -33,10 +35,13 @@ export default class Find extends React.Component {
               <Button size="small">按钮1</Button>
             </Flex.Item>
             <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }}>
-              <Button size="small">按钮2</Button>
+              <Button size="small">dsfdsfsdf按钮2</Button>
+              
             </Flex.Item>
             <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }}>
-              <Button size="small">按钮3</Button>
+              <Button size="small">按钮3
+                
+              </Button>
             </Flex.Item>
           </Flex>
         </WingBlank>
