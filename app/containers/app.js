@@ -8,6 +8,7 @@ import {
 import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IndexContainer from './indexContainer';
+import FindContainer from './findContainer';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -42,14 +43,7 @@ export default class App extends Component{
                     renderIcon={() => <Icon name={ 'ios-more' } size={30} color={'gray'}/>}
                     renderSelectedIcon={() => <Icon name={ 'ios-more' } size={30} color={'#4E78E7'}/>}
                     onPress={() => this.setState({ selectedTab: 'other' })}>
-                    <View>
-                        <Text>
-                            Welcome to React 2323213232132321!
-                        </Text>
-                        <Text>
-                            Welcowwwwwme to React 2323213232132321!
-                        </Text>
-                    </View>
+                   <FindContainer />
                 </TabNavigator.Item>
             </TabNavigator>
         );
