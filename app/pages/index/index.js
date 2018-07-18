@@ -6,6 +6,7 @@ import {
     View
   } from 'react-native';
   import { Button } from 'antd-mobile-rn';
+  import SplashScreen from 'react-native-splash-screen'
 
 export default class Index extends React.Component {
 	constructor(props) {
@@ -13,6 +14,11 @@ export default class Index extends React.Component {
 		this.state = {
 			article: {}
 		}
+	}
+
+	componentDidMount() {
+        // do anything while splash screen keeps, use await to wait for an async task.
+		SplashScreen.hide();
 	}
 
 	componentWillMount() {
