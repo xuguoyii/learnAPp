@@ -1,6 +1,10 @@
 package com.learnreactnative;
 
+import android.os.Bundle; // here
+
 import com.facebook.react.ReactActivity;
+
+import org.devio.rn.splashscreen.SplashScreen; // here
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +15,12 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "learnReactNative";
+    }
+    @Override
+    protected List<ReactPackage> getPackages() {
+        return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+        new SplashScreenReactPackage()  //here
+        );
     }
 }

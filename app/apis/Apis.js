@@ -1,9 +1,9 @@
 import Config from './Config';
 
 const Apis = {
-	// 文章详情
-	getArticleList: `${Config.url}category/wow`,
-
-}
+  // 文章详情
+  getArticleType: `${Config.url}category/wow`,
+  getArticleList: `${Config.url}data/`,
+};
 
 export default Apis;
