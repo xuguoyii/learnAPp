@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-} from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IndexContainer from './indexContainer';
@@ -18,24 +14,33 @@ export default class App extends Component {
   }
 
   render() {
+    const { selectedTab } = this.state;
     return (
       <TabNavigator tabBarStyle={{ backgroundColor: 'white' }} style={{ backgroundColor: 'white', marginTop: 20 }}>
         <TabNavigator.Item
-          title="主页"
-          selected={this.state.selectedTab === 'home'}
+          title="推荐"
+          selected={selectedTab === 'home'}
           renderIcon={() => <Icon name="ios-home" size={30} color="gray" />}
           renderSelectedIcon={() => <Icon name="ios-home" size={30} color="#4E78E7" />}
           onPress={() => this.setState({ selectedTab: 'home' })}
         >
-
           <IndexContainer />
         </TabNavigator.Item>
         <TabNavigator.Item
-          title="其他"
-          selected={this.state.selectedTab === 'other'}
-          renderIcon={() => <Icon name="ios-more" size={30} color="gray" />}
-          renderSelectedIcon={() => <Icon name="ios-more" size={30} color="#4E78E7" />}
-          onPress={() => this.setState({ selectedTab: 'other' })}
+          title="排行榜"
+          selected={selectedTab === 'rank'}
+          renderIcon={() => <Icon name="ios-podium" size={30} color="gray" />}
+          renderSelectedIcon={() => <Icon name="ios-podium" size={30} color="#4E78E7" />}
+          onPress={() => this.setState({ selectedTab: 'rank' })}
+        >
+          <FindContainer />
+        </TabNavigator.Item>
+        <TabNavigator.Item
+          title="搜索"
+          selected={selectedTab === 'search'}
+          renderIcon={() => <Icon name="ios-search" size={30} color="gray" />}
+          renderSelectedIcon={() => <Icon name="ios-search" size={30} color="#4E78E7" />}
+          onPress={() => this.setState({ selectedTab: 'search' })}
         >
           <FindContainer />
         </TabNavigator.Item>
@@ -43,22 +48,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});

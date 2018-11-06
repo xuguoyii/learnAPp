@@ -1,20 +1,13 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Index from '../pages/index/index';
 
-class IndexContainer extends React.Component {
-  render() {
-    return (
-      <Index {...this.props} />
-    );
-  }
-}
 
 const mapStateToProps = (state) => {
-  const { articleList, articleType } = state;
+  const { articleList, articleType, bannerData } = state;
   return {
     articleList: articleList || [],
-    articleType: articleType || []
+    articleType: articleType || [],
+    bannerData: bannerData || [],
   };
 };
 
@@ -25,6 +18,10 @@ const mapDispatchToProps = dispatch => ({
   }),
   getArticleList: payload => dispatch({
     type: 'GET_ARTICLE_LIST_START',
+    payload
+  }),
+  getBanner: payload => dispatch({
+    type: 'GET_BANNER_START',
     payload
   }),
 });

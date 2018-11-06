@@ -22,3 +22,14 @@ export function articleType(state = initialState, action) {
       return state;
   }
 }
+export function bannerData(state = initialState, action) {
+  console.log(action);
+  switch (action.type) {
+    case 'GET_BANNER_SUCCESS':
+      return { ...state, data: action.payload, loading: false };
+    case 'GET_Banner_FAILURE':
+      return { ...state, error: action.payload, loading: false };
+    default:
+      return state;
+  }
+}
